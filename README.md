@@ -1,66 +1,39 @@
-## Foundry
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+# Simple Storage 
 
-Foundry consists of:
+The Simple Storage Contract is a basic example of a smart contract written in Solidity for the Ethereum blockchain. It allows users to store and retrieve a single unsigned integer value.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-## Documentation
+## Deployment
 
-https://book.getfoundry.sh/
+To deploy this project run
 
-## Usage
-
-### Build
-
-```shell
-$ forge build
+```foundry
+  forge init 
 ```
 
-### Test
 
-```shell
-$ forge test
+## Running Tests
+
+To run tests, run the following command
+
+```solidity
+    forge test 
 ```
 
-### Format
-
-```shell
-$ forge fmt
+```solidity
+    forge compile
+```
+```solidity
+    forge create SimpleStorage --private-key <PRIVATE_KEY>
 ```
 
-### Gas Snapshots
 
-```shell
-$ forge snapshot
-```
+## Environment Variables
 
-### Anvil
+To run this project, you will need to add the following environment variables to your .env file
 
-```shell
-$ anvil
-```
+`RPC_URL`
 
-### Deploy
+`PRIVATE_KEY`
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
